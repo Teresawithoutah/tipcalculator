@@ -12,13 +12,13 @@ def split_bill(total_bill,guests):
     final_bill = calculation(total_bill,guests)
     split_tip= final_bill/guests
     
-    print("\nSplit bill ", split_tip)
+   # print("\nSplit bill ", split_tip)
     
     i = 1
 
     #prints how much each guest will need to pay
     while ( i <= guests):
-        print ('Guest',i,'will have to pay:', split_tip)
+        print ('\nGuest',i,'will have to pay:', split_tip)
         i = i + 1
 
 
@@ -28,7 +28,21 @@ def main():
     guests = float(input("Enter number of guests: "))
 
     split_bill(total_bill,guests)
+    process_input(total_bill,guests)
         
+    
+def process_input(total_bill,guests):
+    # if can divide without remainder
+    if total_bill % guests ==0: 
+        print("dividable")
+        return True
+       
+    else:
+        print("not dividable")
+        return False    
+        
+    
+    
     
 if __name__ == '__main__':
     main()
