@@ -1,5 +1,3 @@
-import math
-
 def calculation(total_bill,guests):  
     tip = (15/100)*total_bill
     #calculates final amount of bill with the tip included
